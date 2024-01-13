@@ -67,7 +67,7 @@ const FlagTF = (Flag) => {
 const ResRedirect = () => {
     setTimeout(() => {
         const res = (window.location.href).substring(0, window.location.href.indexOf('/', window.location.href.indexOf('/')+3))
-        location.href = `${res}/FE/resPages/res${ResPoint1}.html`
+        location.href = `${res}/resPages/res${ResPoint1}.html`
     }, 3000);
 }
 
