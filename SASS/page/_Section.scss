@@ -452,7 +452,7 @@
             height: 130vh;
             margin: 0 auto;
             transform: translateX(-50%);
-            background: url(IMG/SuveyBack.jpg) repeat-y center;
+            background: url(../../IMG/SuveyBack.jpg) repeat-y center;
             opacity: 0;
             transition: all .5s;
             // background: url;
@@ -600,7 +600,7 @@ body{
         padding-bottom: 20rem;
         @include FlexCenter();
         flex-direction: column;
-        background: url(IMG/SuveyBack.jpg) repeat-y center;
+        background: url(../../IMG/SuveyBack.jpg) repeat-y center;
         .Title{
             margin: 0px;
             margin-top: 4rem;
