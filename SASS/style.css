@@ -740,7 +740,7 @@ table {
   height: 130vh;
   margin: 0 auto;
   transform: translateX(-50%);
-  background: url(/FE/IMG/SuveyBack.jpg) repeat-y center;
+  background: url(IMG/SuveyBack.jpg) repeat-y center;
   opacity: 0;
   transition: all 0.5s;
 }
@@ -892,7 +892,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url(/FE/IMG/SuveyBack.jpg) repeat-y center;
+  background: url(IMG/SuveyBack.jpg) repeat-y center;
 }
 .Result .ReResult .Title {
   margin: 0px;
