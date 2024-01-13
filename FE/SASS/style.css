@@ -1,0 +1,1400 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  box-shadow: 0px;
+}
+
+.btn {
+  all: unset;
+  position: relative;
+  font-size: 3.6rem;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  transition: all 0.3s;
+  font-weight: bold;
+  margin-top: 30rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 999;
+  margin-left: 2rem;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background-color: #5297ff;
+  box-shadow: 1px 1px 5px #858585;
+  padding: 1.4rem 3.4rem;
+  z-index: -1;
+}
+.btn:hover {
+  transform: scale(1.05);
+  color: white;
+  text-shadow: 0px 0px 6px #c1c1c1;
+}
+
+.Surbtn {
+  all: unset;
+  position: relative;
+  font-size: 5.2rem;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 5px white;
+  transition: all 0.5s;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 999;
+}
+.Surbtn:hover {
+  transform: scale(1.05);
+  color: white;
+  text-shadow: 0px 0px 6px #333;
+}
+.Surbtn .ctnr {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;
+  min-width: 14rem;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.ActiveSurbtn {
+  transform: scale(1.1);
+  color: white;
+  text-shadow: 0px 0px 6px #333;
+}
+.ActiveSurbtn:hover {
+  transform: scale(1.1);
+  color: white;
+  text-shadow: 0px 0px 6px #333;
+}
+
+.Title {
+  all: unset;
+  font-size: 10rem;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 5px white;
+  font-weight: bold;
+  margin-top: 70px;
+  color: #333;
+  z-index: 99;
+}
+
+.introTitle {
+  all: unset;
+  font-size: 3rem;
+  color: #333;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 2px #333;
+  transition: all 0.5s;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.qusTitle {
+  all: unset;
+  font-size: 4.6rem;
+  color: #333;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -3px;
+  word-spacing: 3px;
+  text-shadow: 0px 0px 2px #333;
+  transition: all 0.5s;
+  font-weight: bold;
+  line-height: 130%;
+  margin-left: 24rem;
+}
+
+.LeftFadeIn {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.RightFadeIn {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.TopFadeIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.BottomFadeIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.LeftFadeOut {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.RightFadeOut {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.TopFadeOut {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.BottomFadeOut {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.PageAniOn {
+  transform: translateX(0px);
+  opacity: 1;
+  z-index: 999;
+}
+
+.PageAniOff {
+  transform: translateX(100px);
+  opacity: 0;
+  z-index: -999;
+}
+
+.LoadingSec {
+  position: fixed !important;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ececf0;
+  z-index: 999;
+  transition: all 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.LoadingSec lottie-player {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%) scale(4);
+}
+.LoadingSec .LoadingSpan {
+  position: absolute;
+  text-align: center;
+  max-width: 860px;
+  width: 100%;
+  display: block;
+  left: 50%;
+  top: 80%;
+  font-size: 6rem;
+  color: #333;
+  transform: translate(-50%, -50%);
+  font-family: "Dongle", sans-serif;
+  font-weight: bold;
+}
+
+.Ani {
+  animation: 1s ani ease-in-out;
+  transform: translate(-100%);
+}
+@keyframes ani {
+  0% {
+    transform: translateY(0%);
+    z-index: 999;
+  }
+  20% {
+    transform: translateY(10%);
+    z-index: 999;
+  }
+  100% {
+    transform: translateY(-100%);
+    z-index: 999;
+  }
+}
+
+.back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transition: all 0.5s;
+}
+
+.flipBack {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.TopBack {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+
+#Sec1, #Sec2 {
+  position: relative;
+  width: 100%;
+  background: #ececf0;
+  transition: all 0.5s;
+}
+#Sec1::before, #Sec2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  width: 80%;
+  height: 86%;
+  background-color: #F3F3F3;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px #d8d8d8;
+}
+#Sec1 .MainBouble, #Sec2 .MainBouble {
+  position: absolute;
+  max-width: 740px;
+  top: -5%;
+  left: 48%;
+}
+#Sec1 .inner, #Sec2 .inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 1380px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+#Sec1 .inner .MainBouble2, #Sec2 .inner .MainBouble2 {
+  position: absolute;
+  max-width: 340px;
+  top: -4%;
+  left: -0.5%;
+}
+#Sec1 .inner h3, #Sec2 .inner h3 {
+  position: relative;
+  margin-top: 4rem;
+}
+#Sec1 .inner h3:first-child, #Sec2 .inner h3:first-child {
+  margin-top: 10rem;
+}
+#Sec1 .inner h3:nth-child(3)::before, #Sec2 .inner h3:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 110%;
+  width: 110%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 50px;
+  transition: all 0.5s;
+  animation: aniline 1.4s ease-in-out;
+}
+@keyframes aniline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 110%;
+  }
+}
+#Sec1 .inner .pnt, #Sec2 .inner .pnt {
+  position: absolute;
+  top: 14%;
+  left: 35%;
+  width: 31rem;
+  height: 30rem;
+  transform: translateX(-50%);
+  z-index: 88;
+}
+#Sec1 .inner .ctnr, #Sec2 .inner .ctnr {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 60rem;
+  height: 30rem;
+  transform: translateX(-50%);
+  z-index: 88;
+}
+#Sec1 .inner .ctnr2, #Sec2 .inner .ctnr2 {
+  position: absolute;
+  left: 5.5%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  height: 40rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#Sec1 .inner .ctnr2 svg, #Sec2 .inner .ctnr2 svg {
+  position: absolute;
+}
+
+.arrowRight {
+  all: unset;
+  position: fixed;
+  right: 0.5%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1002;
+  transition: all 0.5s;
+}
+
+.arrow {
+  all: unset;
+  position: fixed;
+  right: 0.5%;
+  top: 50%;
+  width: 20rem;
+  height: 20rem;
+  transform: translateY(-50%);
+  z-index: 1001;
+  transition: all 0.5s;
+}
+
+.Boom {
+  all: unset;
+  position: fixed;
+  right: 0.5%;
+  top: 50%;
+  width: 40rem;
+  height: 40rem;
+  transform: translate(25%, -50%);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.arrowLeft {
+  all: unset;
+  position: fixed;
+  right: 89%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1002;
+  transition: all 0.5s;
+}
+
+.Leftarrow {
+  all: unset;
+  position: fixed;
+  right: 89%;
+  top: 50%;
+  width: 20rem;
+  height: 20rem;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 1001;
+  transition: all 0.5s;
+}
+
+.LeftBoom {
+  all: unset;
+  position: fixed;
+  right: 73%;
+  top: 50%;
+  width: 40rem;
+  height: 40rem;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.UnderMain {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 0;
+  transition: all 1s !important;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
+.UnderMain #Sec1,
+.UnderMain #Sec2 {
+  width: 100vw;
+}
+.UnderMain #Sec1 .inner,
+.UnderMain #Sec2 .inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+.UnderMain #Sec1 .inner .left,
+.UnderMain #Sec2 .inner .left {
+  overflow-x: hidden;
+}
+.UnderMain #Sec1 .inner .back,
+.UnderMain #Sec2 .inner .back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.UnderMain #Sec1 .inner div,
+.UnderMain #Sec2 .inner div {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+.UnderMain #Sec1 .inner div .shares,
+.UnderMain #Sec2 .inner div .shares {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 3.4rem;
+       column-gap: 3.4rem;
+  border-top: 3px double rgba(44, 62, 80, 0.2);
+  border-bottom: 3px double rgba(44, 62, 80, 0.2);
+  padding: 3.8rem 0;
+  margin-top: 39.8rem;
+}
+.UnderMain #Sec1 .inner div .shares li,
+.UnderMain #Sec2 .inner div .shares li {
+  transition: all 0.5s;
+}
+.UnderMain #Sec1 .inner div .shares li a,
+.UnderMain #Sec2 .inner div .shares li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.6rem;
+  height: 4.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #333;
+  transition: all 0.25s;
+}
+.UnderMain #Sec1 .inner div .shares li a img,
+.UnderMain #Sec2 .inner div .shares li a img {
+  width: 100%;
+  pointer-events: none;
+}
+.UnderMain #Sec1 .inner div .shares li a:hover,
+.UnderMain #Sec2 .inner div .shares li a:hover {
+  transform: translateY(-4%) scale(1.2);
+}
+.UnderMain #Sec1 .inner div .shares li:nth-child(1) a img,
+.UnderMain #Sec2 .inner div .shares li:nth-child(1) a img {
+  width: 70%;
+}
+.UnderMain #Sec1 .inner div .shares li .naver,
+.UnderMain #Sec2 .inner div .shares li .naver {
+  position: absolute;
+  width: 221%;
+  left: -121%;
+  top: -121%;
+}
+.UnderMain #Sec1 .inner div .shares li .insta,
+.UnderMain #Sec2 .inner div .shares li .insta {
+  width: 144%;
+}
+.UnderMain #Sec1 .inner div .introTitle,
+.UnderMain #Sec2 .inner div .introTitle {
+  margin-top: 8rem;
+}
+.UnderMain #Sec1 .inner div .leftTop,
+.UnderMain #Sec2 .inner div .leftTop {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  text-align: left;
+}
+.UnderMain #Sec1 .inner div .rightTop,
+.UnderMain #Sec2 .inner div .rightTop {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  text-align: right;
+}
+.UnderMain #Sec1 .inner div .center,
+.UnderMain #Sec2 .inner div .center {
+  position: absolute;
+  right: 50%;
+  top: 10%;
+  text-align: right;
+  transform: translateX(-50%);
+}
+.UnderMain #Sec1 .inner div .Bottom,
+.UnderMain #Sec2 .inner div .Bottom {
+  position: absolute;
+  bottom: 14%;
+  right: 40%;
+  width: 72rem;
+  height: 72rem;
+  transition: all 0.5s;
+  transform: translateX(50%);
+}
+
+#Sec2 {
+  background-color: #ececf0;
+}
+
+.Section4 {
+  position: absolute !important;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.Section4 .inner {
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+}
+.Section4 .inner .left .introTitle {
+  font-size: 4rem;
+  z-index: 99;
+  color: black;
+  margin-top: 2rem !important;
+}
+.Section4 .inner .right lottie-player {
+  position: absolute;
+}
+.Section4 .inner .right lottie-player:nth-child(1) {
+  top: -60% !important;
+  transform: scale(1.8);
+  opacity: 0.2;
+}
+.Section4 .inner .right lottie-player:nth-child(2) {
+  top: -60% !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Section4 .inner .right .LottieRotate {
+  position: absolute;
+  display: none;
+  width: 28rem;
+  height: 14rem;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%) scale(19);
+  z-index: 9999;
+}
+.Section4 .inner .right .Dot {
+  position: absolute;
+  display: block;
+  width: 0rem;
+  height: 0rem;
+  left: 50%;
+  bottom: 80%;
+  transform: translateX(-50%);
+  background-color: #FF6868;
+  border-radius: 50%;
+  transition: all 1.4s ease-in-out;
+}
+.Section4 .inner .right .btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 6rem;
+  transform: translateX(-50%);
+  margin: 0 0 !important;
+}
+.Section4 .inner .right .btn:hover {
+  transform: scale(1.2) translateX(-40%);
+}
+.Section4 .inner .right .btn::before {
+  display: none;
+}
+
+.Survey {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  z-index: 1004;
+  opacity: 0;
+}
+.Survey .progressBar {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  width: 50%;
+  height: 10px;
+  transform: translateX(-50%);
+  z-index: 1005;
+}
+.Survey .progressBar li {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 3px #888;
+  transition: all 0.75s;
+  background: linear-gradient(to right, #81ecec, #74b9ff);
+}
+.Survey .Section {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.Survey .Section .inner {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 50%;
+  max-width: 1080px;
+  width: 100%;
+  height: 130vh;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  background: url(/FE/IMG/SuveyBack.jpg) repeat-y center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.Survey .Section .inner .back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100% !important;
+}
+.Survey .Section .inner .top {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10rem;
+}
+.Survey .Section .inner .top lottie-player {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 20rem;
+}
+.Survey .Section .inner .middle {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  width: 80%;
+  padding: 14rem 0rem 10rem 0rem;
+  margin: 46rem auto 2rem auto;
+}
+.Survey .Section .inner .middle li {
+  padding: 4rem 0;
+}
+.Survey .Section .inner .middle img {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: -80%;
+  left: 50%;
+  border-radius: 30px;
+  border: 8px solid #fff;
+  box-shadow: 1px 1px 10px #cecece;
+  transform: translateX(-50%);
+}
+.Survey .Section .inner .bottom {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 45rem;
+  overflow: hidden;
+  left: 0px;
+  bottom: 0px;
+}
+.Survey .Section .inner .bottom lottie-player {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 100rem;
+  height: 72rem;
+}
+
+.ResultLoading {
+  display: none;
+  opacity: 0;
+  z-index: -1005;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.ResultLoading .ReLoading {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ResultLoading .ReLoading .Sofong {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 12rem;
+}
+.ResultLoading .ReLoading .Sofong li {
+  all: unset;
+  font-size: 10rem;
+  font-family: "Poor Story", cursive;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-shadow: 0px 0px 5px white;
+  font-weight: bold;
+  color: #333;
+  z-index: 99;
+  animation: SofongLoading 2s infinite ease-in-out;
+  animation-delay: calc(0.25s * var(--k));
+}
+@keyframes SofongLoading {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-6rem);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.ResultLoading .ReLoading .ReLottie {
+  width: 50rem;
+  height: 50rem;
+  margin-top: 6rem;
+}
+
+body {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
+
+.Result {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  transition: all 0.5s;
+}
+.Result .ReResult {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(/FE/IMG/SuveyBack.jpg) repeat-y center;
+}
+.Result .ReResult .Title {
+  margin: 0px;
+  margin-top: 4rem;
+  font-size: 14rem;
+  cursor: default;
+}
+.Result .ReResult .T {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 4rem;
+  font-family: "Poor Story", cursive;
+  font-weight: bold;
+  letter-spacing: -1px;
+  word-spacing: 0.8rem;
+  margin-top: 6rem;
+  color: #42a1ff;
+}
+.Result .ReResult .T span {
+  margin-top: 1rem;
+  color: #333;
+}
+.Result .ReResult .idCard {
+  width: 80%;
+  height: 520px;
+  background-color: #fefefe;
+  border-radius: 30px;
+  margin: 6rem 0;
+  border: 5px solid #333;
+  overflow: hidden;
+}
+.Result .ReResult .idCard .top {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 6rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Poor Story", cursive;
+  background-color: #42a1ff;
+  color: #fff;
+}
+.Result .ReResult .idCard .top span:nth-child(1) {
+  font-size: 4rem;
+  margin-left: 3rem;
+}
+.Result .ReResult .idCard .top span:nth-child(2) {
+  position: relative;
+  margin-left: 5rem;
+}
+.Result .ReResult .idCard .top span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: -10%;
+  width: 2px;
+  height: 120%;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.Result .ReResult .idCard .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.Result .ReResult .idCard .bottom img {
+  width: 30%;
+  box-shadow: 0px 0px 5px #cecece;
+  border-radius: 10px;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+.Result .ReResult .idCard .bottom .right {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 28rem;
+  font-size: 2rem;
+  font-family: "Poor Story", cursive;
+  padding-left: 2rem;
+  margin-bottom: 4rem;
+}
+.Result .ReResult .idCard .bottom .right span {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+.Result .ReResult .idCard .bottom .right span span:nth-child(1) {
+  position: relative;
+  padding: 0.5rem 5rem;
+  background-color: #42a1ff;
+  border-radius: 50px;
+  font-size: 3rem;
+  color: #fff;
+}
+.Result .ReResult .idCard .bottom .right span span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: 6rem;
+  bottom: 0px;
+  width: 59rem;
+  height: 5px;
+  background-color: #42a1ff;
+}
+.Result .ReResult .idCard .bottom .right span span:nth-child(2) {
+  display: inline-block;
+  font-size: 2.4rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+.Result .ReResult p {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  font-family: "Poor Story", cursive;
+  line-height: 3.2rem;
+}
+.Result .ReResult .shares {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 3.4rem;
+       column-gap: 3.4rem;
+  border-top: 3px double rgba(44, 62, 80, 0.2);
+  border-bottom: 3px double rgba(44, 62, 80, 0.2);
+  padding: 3.8rem 0;
+}
+.Result .ReResult .shares li {
+  transition: all 0.5s;
+}
+.Result .ReResult .shares li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.6rem;
+  height: 4.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #333;
+  transition: all 0.25s;
+}
+.Result .ReResult .shares li a img {
+  width: 100%;
+  pointer-events: none;
+}
+.Result .ReResult .shares li a:hover {
+  transform: translateY(-4%) scale(1.2);
+}
+.Result .ReResult .shares li:nth-child(1) a img {
+  width: 70%;
+}
+.Result .ReResult .shares li .naver {
+  position: absolute;
+  width: 221%;
+  left: -121%;
+  top: -121%;
+}
+.Result .ReResult .shares li .insta {
+  width: 144%;
+}
+.Result .ReResult .Surbtn {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  transition: all 0.4s;
+}
+.Result .ReResult .Surbtn::after {
+  content: "";
+  position: absolute;
+  left: -1.4rem;
+  bottom: -0.6rem;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  transform: rotate(-2deg);
+  transition: all 0.4s;
+}
+.Result .ReResult .Surbtn:hover {
+  text-shadow: 2px 2px 5px white;
+  transform: translateX(-50%) scale(1) translateY(-4%);
+  animation-delay: 0.4s;
+  animation: iden 2s infinite ease-in-out;
+  transition: all 0.4s;
+}
+.Result .ReResult .Surbtn:hover::after {
+  width: 120%;
+}
+@keyframes iden {
+  0% {
+    transform: translateX(-50%) scale(1) translateY(-4%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-4deg);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(12deg);
+  }
+  75% {
+    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.2) translateY(-4%) rotate(0deg);
+  }
+}
+.Result .ReResult .Feedback {
+  position: absolute;
+  right: -22%;
+  bottom: -14%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Result .ReResult .Feedback .arrow {
+  position: absolute;
+  left: -60%;
+  top: -10%;
+  transform: scale(0.75);
+}
+.Result .ReResult .Feedback .FeedbackMailbox {
+  width: 300px;
+  height: 300px;
+}
+
+.MailForm {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  z-index: -9999;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.MailForm::before {
+  content: "";
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.75);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 9999;
+}
+.MailForm form {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80rem;
+  height: 60rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 4rem 4rem;
+  z-index: 9999;
+}
+.MailForm form .Title {
+  font-size: 4rem;
+  margin: 0px;
+  cursor: default;
+}
+.MailForm form p {
+  display: block;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+  font-size: 2.4rem;
+  font-family: "Poor Story", cursive;
+  margin: 2.4rem 0rem 3rem 0rem;
+  line-height: 2.6rem;
+}
+.MailForm form .text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 2px 2px 5px #999;
+  border-radius: 0.2rem;
+}
+.MailForm form .text .toolbar {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #d2dae2;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+.MailForm form .text .toolbar li button {
+  all: unset;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.2s;
+  color: #333;
+  cursor: pointer;
+}
+.MailForm form .text .toolbar li button:hover {
+  background-color: #d2dae2;
+}
+.MailForm form .text .toolbar li button:hover::after {
+  content: attr(data-S);
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -100%;
+  left: 50%;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 1.6rem;
+  background-color: #333;
+  padding: 1rem;
+  font-family: "Poor Story", cursive;
+  transform: translateX(-50%);
+  border-radius: 0.4rem;
+}
+.MailForm form .text .toolbar li button:focus {
+  box-shadow: 0px 0px 4px #555;
+}
+.MailForm form .text .toolbar .submit {
+  all: unset;
+  position: absolute;
+  width: 8rem;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  color: #333;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Poor Story", cursive;
+  background-color: #333;
+  margin: 0.2rem;
+  color: white;
+  cursor: pointer;
+}
+.MailForm form .text .toolbar .submit:focus {
+  box-shadow: 0px 0px 16px #555;
+}
+.MailForm form .text textarea {
+  all: unset;
+  position: relative;
+  display: block;
+  width: calc(100% - 4rem);
+  height: 84%;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+  font-size: 2.6rem;
+  font-family: "Poor Story", cursive;
+  margin-top: 5rem;
+  padding: 0rem 2rem 1rem 2rem;
+  transition: all 0.5s;
+}
+.MailForm form .closebtn {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  font-size: 3rem;
+  transform: translate(-100%, 100%);
+  cursor: pointer;
+}
+
+.alertbtn {
+  position: fixed;
+  display: block;
+  top: 76%;
+  left: 50%;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  color: white;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Poor Story", cursive;
+  padding: 1rem 1.8rem;
+  border-radius: 0.6rem;
+  box-shadow: 0px 0px 10px white;
+  opacity: 0;
+  z-index: -9999;
+  transition: all 0.5s;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.red {
+  z-index: 9999;
+  opacity: 1;
+  background-color: rgb(253, 74, 61);
+}
+
+.green {
+  z-index: 9999;
+  opacity: 1;
+  background-color: rgb(93, 253, 61);
+}
+
+.yellow {
+  z-index: 9999;
+  opacity: 1;
+  background-color: rgb(253, 247, 61);
+}
+
+#t4-input {
+  opacity: 0;
+  z-index: -9999;
+}
+
+.resList {
+  position: absolute;
+  left: -43%;
+  top: 39%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300rem;
+  height: 22rem;
+  transform: translateX(10%);
+  z-index: 90;
+  animation: imgSlide 10s infinite ease-in-out;
+}
+@keyframes imgSlide {
+  0% {
+    left: -43%;
+  }
+  20% {
+    left: -93.5%;
+  }
+  40% {
+    left: -144%;
+  }
+  60% {
+    left: -194.5%;
+  }
+  80% {
+    left: -245%;
+  }
+  100% {
+    left: -294.8%;
+  }
+}
+.resList li {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px #cecece;
+}
+.resList li img {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+html body {
+  background-color: #ececf0;
+  overflow: hidden;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+html body .screen {
+  transition: all 0.5s;
+}/*# sourceMappingURL=style.css.map */
